@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "dependencies": {
+    "connect-redis": "^7.1.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "helmet": "^7.1.0",
+    "nodemon": "^3.0.2",
+    "redis": "^4.6.11"
+  }
+}
