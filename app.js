@@ -47,13 +47,14 @@ app.get("/json", (_req, res) => {
 });
 
 app.get("/json_weird", (_req, res) => {
+  res.set("Content-Type", "application/zip")
   res.json({ msg: "This is a JSON response!" }); //Nu kommer vi få "Content-type": "application/zip", mycket förvirrande för webbläsaren!
 });
 
 app.get("/script", (req, res) => {
   res.set("Content-Security-Policy", "script-src 'self'"); //Stänger av script med källa annan en själv.
   res.send(
-    "<SCRIPT SRC=https://cdn.jsdelivr.net/gh/Moksh45/host-xss.rocks/index.js></SCRIPT>"
+    "<script src=https://cdn.jsdelivr.net/gh/Moksh45/host-xss.rocks/index.js></script>"
   );
 });
 
